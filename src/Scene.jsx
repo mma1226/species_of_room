@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { BackSide } from "three";
 import { Environment } from "@react-three/drei";
@@ -5,7 +6,7 @@ import { Environment } from "@react-three/drei";
 import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
 import BlueAnimatedHighlight from "./BlueAnimatedHighlight";
-
+import OrPoints from "./OrPoints";
 function Scene() {
   return (
     <div id="canvas_wrapper">
@@ -25,11 +26,15 @@ function Scene() {
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
         <color args={["grey"]} attach="background" />
 
-        {/* Objects 📦 */}
-        <mesh position={[0, 2.5, 0]} rotation={[0, Math.PI / 4, 0]}>
-          <boxGeometry args={[5, 5, 5]} />
-          <meshStandardMaterial side={BackSide} />
-        </mesh>
+        {/* Objects 📦 -> <primitive /> */}
+        <points position={[0, 2.5, 0]} rotation={[0, Math.PI / 4, 0]}>
+          <boxGeometry args={[5, 5, 5, 128, 128, 128]} />
+          <pointsMaterial size={0.01} side={BackSide} />
+        </points>
+
+        <Suspense>
+          <OrPoints />
+        </Suspense>
 
         {/* Our animated highlights */}
         <OrangeAnimatedHighlight />

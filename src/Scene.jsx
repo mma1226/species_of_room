@@ -34,7 +34,7 @@ function Scene() {
         */}
 
         <Suspense>
-          <ModelPoints />
+          <ModelPoints index={0}/>
         </Suspense>
 
       </Canvas>

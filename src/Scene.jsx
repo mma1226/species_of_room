@@ -70,7 +70,8 @@ function Scene() {
         */}
 
         {dataPoints.map(
-          //for each item, return a component
+          //map over the dataPoints array with the argument named item and return an instance of the ModelPoints component.
+          //for each item, return a component (item)
           (item) => (
             <Suspense> 
               <ModelPoints name={item.name} src={item.src} text={item.text} />

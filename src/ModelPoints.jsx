@@ -8,10 +8,7 @@ export default function ModelPoints(props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { scene, nodes } = useGLTF(src);
-
-
   let model= Object.values(nodes)[1];
-  console.log(model);
 
   // nodes.room.geometry
   // nodes.bed.geometry
@@ -22,12 +19,13 @@ export default function ModelPoints(props) {
       onPointerOver={() => {
         //if you want more than one thing to happen
         //wrap these functions with a pair of curly bracket
+        console.log('hovered')
         setIsExpanded(true);
       }}
       onPointerLeave={() => {
         setIsExpanded(false);
       }}
-      scale={[1, 1, 1]}
+      scale={[5, 5, 5]}
       rotation={[Math.PI / 2, 0, 0]}
       geometry={model.geometry}
     >

@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { BackSide } from "three";
 import { Environment } from "@react-three/drei";
@@ -7,7 +7,36 @@ import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
 
 import ModelPoints from "./ModelPoints";
+
 function Scene() {
+  //where to store data
+  //[state, stateSetter]
+  const [dataPoints, setDataPoints] = useState([]);
+  //empty dependency -> happen once, = on create function
+  //get the data
+  useEffect(() => {
+    //return an asyncronous function ->Promise
+    //you can chain asyncronous function
+    fetch("./model.json").then((response) => {
+      //response.json() creates another Promise, which is parsed JSON file
+      response.json().then((jsObject) => {
+        //deconstruct object
+        const { rawData } = jsObject;
+        console.log(rawData);
+
+        const mappedData = rawData.map((item) => {
+          return {
+            name: item.name,
+            src: item.src,
+            text: item.description,
+          };
+        });
+
+        setDataPoints(mappedData);
+      });
+    });
+  }, []);
+
   return (
     <div id="canvas_wrapper">
       <Canvas>
@@ -33,10 +62,21 @@ function Scene() {
         </points>
         */}
 
-        <Suspense>
-          <ModelPoints index={0}/>
-        </Suspense>
+    
+        {/* Data points turned into geometry with it's own interaction 📌 */}
 
+        {/* not storing the mutated thing, 
+        but using the map() function to loop through the array
+        and mount 241 components, each with specific positions
+        */}
+        {dataPoints.map(
+          //for each item, return a component
+          (item) => {
+            <Suspense>
+              <ModelPoints name={item.name} src={item.src} text={item.text} />
+            </Suspense>;
+          }
+        )}
       </Canvas>
     </div>
   );

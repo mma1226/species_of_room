@@ -1,12 +1,13 @@
 import { useGLTF, Html } from "@react-three/drei";
 import { useState } from "react";
 
-export default function ModelPoints() {
+export default function ModelPoints(props) {
+  
+  const {name, src, text} = props;
+  
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const { scene, nodes } = useGLTF(
-    "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/mypeeg.glb?v=1701280505888"
-  );
+  const { scene, nodes } = useGLTF(src);
 
   console.log(nodes);
 

@@ -18,7 +18,6 @@ function Scene() {
     //return an asyncronous function ->Promise
     //you can chain asyncronous function
     fetch("./src/model.json").then((response) => {
-      
       //response.json() creates another Promise, which is parsed JSON file
       response.json().then((jsObject) => {
         //deconstruct object
@@ -63,7 +62,6 @@ function Scene() {
         </points>
         */}
 
-    
         {/* Data points turned into geometry with it's own interaction 📌 */}
 
         {/* not storing the mutated thing, 
@@ -71,15 +69,13 @@ function Scene() {
         and mount 241 components, each with specific positions
         */}
 
-        
         {dataPoints.map(
           //for each item, return a component
-          (item) => {
-            console.log(typeof item.name);
-            <Suspense>
+          (item) => (
+            <Suspense> 
               <ModelPoints name={item.name} src={item.src} text={item.text} />
-            </Suspense>;
-          }
+            </Suspense>
+            )
         )}
       </Canvas>
     </div>

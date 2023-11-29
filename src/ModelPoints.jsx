@@ -9,9 +9,9 @@ export default function ModelPoints(props) {
 
   const { scene, nodes } = useGLTF(src);
 
-  console.log(Object.keys(nodes));
-  let model_name = Object.keys(nodes)[1];
-  console.log(typeof model_name)
+
+  let model= Object.values(nodes)[1];
+  console.log(model);
 
   // nodes.room.geometry
   // nodes.bed.geometry
@@ -27,9 +27,9 @@ export default function ModelPoints(props) {
       onPointerLeave={() => {
         setIsExpanded(false);
       }}
-      scale={[10, 10, 10]}
+      scale={[1, 1, 1]}
       rotation={[Math.PI / 2, 0, 0]}
-      geometry={Object.key(nodes)[1].geometry}
+      geometry={model.geometry}
     >
       {isExpanded && (
         <Html>
@@ -46,7 +46,7 @@ export default function ModelPoints(props) {
         </Html>
       )}
 
-      <pointsMaterial size={0.01} map={Object.key(nodes)[1].material.map} />
+      <pointsMaterial size={0.01} map={model.material.map} />
     </points>
   );
 }

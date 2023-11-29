@@ -12,7 +12,7 @@ function OrangeAnimatedHighlight() {
       {
         opacity: 0.5,
       },
-      "intro"
+      "top"
     );
 
     AnimationTimeline.to(

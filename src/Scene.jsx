@@ -5,7 +5,7 @@ import { Environment } from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
-import BlueAnimatedHighlight from "./BlueAnimatedHighlight";
+
 import OrPoints from "./OrPoints";
 function Scene() {
   return (
@@ -36,10 +36,6 @@ function Scene() {
           <OrPoints />
         </Suspense>
 
-        {/* Our animated highlights 
-        <OrangeAnimatedHighlight />
-        <BlueAnimatedHighlight />
-        */}
       </Canvas>
     </div>
   );

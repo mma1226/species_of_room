@@ -12,16 +12,17 @@ function AnimatedCamera() {
       cameraRef.current.position,
       {
         x: -1,
-        y: 1,
+        y: 5,
         z: 5,
       },
-      "intro"
+      "top"
     );
 
     AnimationTimeline.to(
       cameraRef.current.position,
       {
         x: 1,
+        y:0
       },
       "middle"
     );
@@ -30,16 +31,16 @@ function AnimatedCamera() {
       cameraRef.current.position,
       {
         x: 0,
-        y: 2.5,
+        y: -5,
         z: 10,
       },
-      "outro"
+      "bottom"
     );
 
     return () => CameraTimeline.kill();
   }, []);
   return (
-    <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 2.5, 10]} />
+    <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 5, 10]} />
   );
 }
 

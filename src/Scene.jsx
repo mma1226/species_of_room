@@ -36,9 +36,10 @@ function Scene() {
           <OrPoints />
         </Suspense>
 
-        {/* Our animated highlights */}
+        {/* Our animated highlights 
         <OrangeAnimatedHighlight />
         <BlueAnimatedHighlight />
+        */}
       </Canvas>
     </div>
   );

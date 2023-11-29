@@ -2,12 +2,13 @@ import { useGLTF, Html } from "@react-three/drei";
 import { useState } from "react";
 
 export default function ModelPoints(props) {
-  
+  console.log('model mounted')
   const {name, src, text} = props;
   
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const { scene, nodes } = useGLTF(src);
+  console.log(src)
+  const { scene, nodes } = useGLTF({src});
 
   console.log(nodes);
 

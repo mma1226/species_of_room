@@ -17,14 +17,15 @@ function Scene() {
   useEffect(() => {
     //return an asyncronous function ->Promise
     //you can chain asyncronous function
-    fetch("./model.json").then((response) => {
+    fetch("./src/model.json").then((response) => {
+      
       //response.json() creates another Promise, which is parsed JSON file
       response.json().then((jsObject) => {
         //deconstruct object
-        const { rawData } = jsObject;
-        console.log(rawData);
+        const { models } = jsObject;
+        console.log(models);
 
-        const mappedData = rawData.map((item) => {
+        const mappedData = models.map((item) => {
           return {
             name: item.name,
             src: item.src,
@@ -69,6 +70,7 @@ function Scene() {
         but using the map() function to loop through the array
         and mount 241 components, each with specific positions
         */}
+        
         {dataPoints.map(
           //for each item, return a component
           (item) => {

@@ -6,7 +6,7 @@ import { Environment } from "@react-three/drei";
 import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
 
-import OrPoints from "./OrPoints";
+import ModelPoints from "./ModelPoints";
 function Scene() {
   return (
     <div id="canvas_wrapper">
@@ -26,14 +26,15 @@ function Scene() {
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
         <color args={["grey"]} attach="background" />
 
-        {/* Objects 📦 -> <primitive /> */}
+        {/* Objects 📦 -> <primitive /> 
         <points position={[0, 2.5, 0]} rotation={[0, Math.PI / 4, 0]}>
           <boxGeometry args={[5, 5, 5, 128, 128, 128]} />
           <pointsMaterial size={0.01} side={BackSide} />
         </points>
+        */}
 
         <Suspense>
-          <OrPoints />
+          <ModelPoints />
         </Suspense>
 
       </Canvas>

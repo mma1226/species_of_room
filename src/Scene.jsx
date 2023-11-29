@@ -70,10 +70,12 @@ function Scene() {
         but using the map() function to loop through the array
         and mount 241 components, each with specific positions
         */}
+
         
         {dataPoints.map(
           //for each item, return a component
           (item) => {
+            console.log(typeof item.name);
             <Suspense>
               <ModelPoints name={item.name} src={item.src} text={item.text} />
             </Suspense>;

@@ -7,10 +7,11 @@ export default function ModelPoints(props) {
   
   const [isExpanded, setIsExpanded] = useState(false);
 
-  console.log(typeof src)
   const { scene, nodes } = useGLTF(src);
 
-  console.log(nodes);
+  console.log(Object.keys(nodes));
+  let model_name = Object.keys(nodes)[1];
+  console.log(typeof model_name)
 
   // nodes.room.geometry
   // nodes.bed.geometry
@@ -28,7 +29,7 @@ export default function ModelPoints(props) {
       }}
       scale={[10, 10, 10]}
       rotation={[Math.PI / 2, 0, 0]}
-      geometry={nodes.textured001.geometry}
+      geometry={Object.key(nodes)[1].geometry}
     >
       {isExpanded && (
         <Html>
@@ -40,12 +41,12 @@ export default function ModelPoints(props) {
               borderRadius: "5px",
             }}
           >
-            "hello"
+            {text}
           </div>
         </Html>
       )}
 
-      <pointsMaterial size={0.01} map={nodes.textured001.material.map} />
+      <pointsMaterial size={0.01} map={Object.key(nodes)[1].material.map} />
     </points>
   );
 }

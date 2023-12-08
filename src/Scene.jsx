@@ -75,9 +75,13 @@ function Scene() {
           (item) => (
             <Suspense> 
               <ModelPoints name={item.name} src={item.src} text={item.text} />
+              <Model />
+              <Preload all />
             </Suspense>
             )
         )}
+        
+        
       </Canvas>
     </div>
   );

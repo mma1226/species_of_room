@@ -81,7 +81,7 @@ function Scene() {
             )
         )}
         
-        <Prelad 
+        <Preload all/>
       </Canvas>
     </div>
   );

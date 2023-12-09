@@ -2,6 +2,7 @@ import { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { BackSide } from "three";
 import { Environment } from "@react-three/drei";
+import { Preload } from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
@@ -75,13 +76,12 @@ function Scene() {
           (item) => (
             <Suspense> 
               <ModelPoints name={item.name} src={item.src} text={item.text} />
-              <Model />
-              <Preload all />
+              
             </Suspense>
             )
         )}
         
-        
+        <Prelad 
       </Canvas>
     </div>
   );

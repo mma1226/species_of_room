@@ -16,7 +16,7 @@ export default function ModelPoints(props) {
 
   return (
     <points
-      onPointerOver={() => {
+      onPointerEnter={() => {
         //if you want more than one thing to happen
         //wrap these functions with a pair of curly bracket
         console.log('hovered')

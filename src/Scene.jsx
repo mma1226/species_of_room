@@ -75,7 +75,7 @@ function Scene() {
           //for each item, return a component (item)
           (item) => (
             <Suspense> 
-              <ModelPoints name={item.name} src={item.src} text={item.text} />
+              <ModelPoints key={item.name} name={item.name} src={item.src} text={item.text} />
               
             </Suspense>
             )

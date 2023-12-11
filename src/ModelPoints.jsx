@@ -14,17 +14,19 @@ export default function ModelPoints(props) {
   // nodes.other_object.geometry
 
   return (
-    <Box
-      onPointerEnter={() => {
-        //if you want more than one thing to happen
-        //wrap these functions with a pair of curly bracket
-        console.log("hovered");
-        setIsExpanded(true);
-      }}
-      onPointerLeave={() => {
-        setIsExpanded(false);
-      }}
-    >
+    <group>
+      <Box
+        visible={false}
+        onPointerEnter={() => {
+          //if you want more than one thing to happen
+          //wrap these functions with a pair of curly bracket
+          console.log("hovered");
+          setIsExpanded(true);
+        }}
+        onPointerLeave={() => {
+          setIsExpanded(false);
+        }}
+      />
       <points
         scale={[5, 5, 5]}
         rotation={[Math.PI / 2, 0, 0]}
@@ -47,6 +49,6 @@ export default function ModelPoints(props) {
 
         <pointsMaterial size={0.01} map={model.material.map} />
       </points>
-    </Box>
+    </group>
   );
 }

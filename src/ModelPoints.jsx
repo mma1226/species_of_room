@@ -43,7 +43,7 @@ export default function ModelPoints(props) {
               style={{
                 color: "black",
                 padding: "10px",
-                background: "rgba(255,255,255,10)",
+                background: "rgb(255,255,255,0.1)",
                 borderRadius: "5px",
               }}
             >

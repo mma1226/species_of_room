@@ -1,7 +1,7 @@
 import { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { BackSide } from "three";
-import { Environment } from "@react-three/drei";
+import { Environment, Float } from "@react-three/drei";
 import { Preload } from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
@@ -75,13 +75,27 @@ function Scene() {
           //map over the dataPoints array with the argument named item and return an instance of the ModelPoints component.
           //for each item, return a component (item)
           (item) => (
-            <Suspense> 
-              <ModelPoints key={item.name} name={item.name} src={item.src} text={item.text} position={item.position} />
+            <Suspense>
+              <Float
+                speed={1} // Animation speed, defaults to 1
+                rotationIntensity={1} // XYZ rotation intensity, defaults to 1
+                floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+                floatingRange={[1, 10]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+              >
+                <ModelPoints
+                  key={item.name}
+                  name={item.name}
+                  src={item.src}
+                  text={item.text}
+                  position={item.position}
+                  rotationSpeed={0.0001}
+                />
+              </Float>
             </Suspense>
-            )
+          )
         )}
-        
-        <Preload all/>
+
+        <Preload all />
       </Canvas>
     </div>
   );

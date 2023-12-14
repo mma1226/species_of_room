@@ -1,20 +1,23 @@
 import { useGLTF, Html, Box } from "@react-three/drei";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import {useFrame} from "@react-three/fiber";
 
 export default function ModelPoints(props) {
-  const { name, src, text, position } = props;
+  const { name, src, text, position, rotationSpeed } = props;
 
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { scene, nodes } = useGLTF(src);
   let model = Object.values(nodes)[1];
+  
+  const modelRef = useRef();
 
-  // nodes.room.geometry
-  // nodes.bed.geometry
-  // nodes.other_object.geometry
-
+  useFrame(()=>{
+    modelRef.current.rotation.y += rotationSpeed;
+  })
+  
   return (
-    <group>
+    <group >
       <Box
         position={position}
         visible={false}
@@ -31,8 +34,8 @@ export default function ModelPoints(props) {
       <points
         scale={[5, 5, 5]}
         position={position}
-        rotation={[Math.PI / 2, 0, 0]}
         geometry={model.geometry}
+        ref={modelRef}
       >
         {isExpanded && (
           <Html>

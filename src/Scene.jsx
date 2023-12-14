@@ -8,6 +8,7 @@ import AnimatedCamera from "./AnimatedCamera";
 import OrangeAnimatedHighlight from "./OrangeAnimatedHighlight";
 
 import ModelPoints from "./ModelPoints";
+import FX from "./FX"
 
 function Scene() {
   //where to store data
@@ -42,6 +43,7 @@ function Scene() {
   return (
     <div id="canvas_wrapper">
       <Canvas>
+        < FX/>
         <Environment preset="night" />
 
         {/* Camera 🎥 */}
@@ -80,7 +82,7 @@ function Scene() {
                 speed={1} // Animation speed, defaults to 1
                 rotationIntensity={1} // XYZ rotation intensity, defaults to 1
                 floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-                floatingRange={[1, 10]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+                floatingRange={[-0.3, 0.3]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
               >
                 <ModelPoints
                   key={item.name}

@@ -41,9 +41,9 @@ export default function ModelPoints(props) {
           <Html>
             <div
               style={{
-                color: "white",
+                color: "black",
                 padding: "10px",
-                background: "grey",
+                background: "rgba(255,255,255,10)",
                 borderRadius: "5px",
               }}
             >

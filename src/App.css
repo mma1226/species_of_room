@@ -5,7 +5,6 @@ body {
 
 #article_wrapper {
   position: relative;
-  background-color: grey;
   height: 5000px; /* Length of the interactive scroll article */
 }
 
@@ -17,6 +16,14 @@ body {
   height: 100vh;
 }
 
+.hoverText {
+  color: "black";
+padding: "10px";
+background: "white";
+ border-radius: "5px";
+           
+}
+
 .scroll_slide {
   color: "white";
   position: "absolute";
@@ -24,3 +31,4 @@ body {
   padding-left: "20px";
   z-index: "50";
 }
+

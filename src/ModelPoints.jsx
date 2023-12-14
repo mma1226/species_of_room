@@ -2,7 +2,7 @@ import { useGLTF, Html, Box } from "@react-three/drei";
 import { useState } from "react";
 
 export default function ModelPoints(props) {
-  const { name, src, text } = props;
+  const { name, src, text, position } = props;
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -16,6 +16,7 @@ export default function ModelPoints(props) {
   return (
     <group>
       <Box
+        position={position}
         visible={false}
         onPointerEnter={() => {
           //if you want more than one thing to happen
@@ -29,6 +30,7 @@ export default function ModelPoints(props) {
       />
       <points
         scale={[5, 5, 5]}
+        position={position}
         rotation={[Math.PI / 2, 0, 0]}
         geometry={model.geometry}
       >

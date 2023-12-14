@@ -11,7 +11,7 @@ function AnimatedCamera() {
     AnimationTimeline.to(
       cameraRef.current.position,
       {
-        x: -1,
+        x: 0,
         y: 5,
         z: 5,
       },
@@ -21,7 +21,7 @@ function AnimatedCamera() {
     AnimationTimeline.to(
       cameraRef.current.position,
       {
-        x: 1,
+        x: 0,
         y:0
       },
       "middle"

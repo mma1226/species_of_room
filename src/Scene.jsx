@@ -30,6 +30,7 @@ function Scene() {
             name: item.name,
             src: item.src,
             text: item.description,
+            position: item.position,
           };
         });
 
@@ -75,8 +76,7 @@ function Scene() {
           //for each item, return a component (item)
           (item) => (
             <Suspense> 
-              <ModelPoints key={item.name} name={item.name} src={item.src} text={item.text} />
-              
+              <ModelPoints key={item.name} name={item.name} src={item.src} text={item.text} position={item.position} />
             </Suspense>
             )
         )}

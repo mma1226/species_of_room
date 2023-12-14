@@ -31,8 +31,8 @@ function AnimatedCamera() {
       cameraRef.current.position,
       {
         x: 0,
-        y: -1,
-        z: 10,
+        y: -7,
+        z: 5,
       },
       "bottom"
     );

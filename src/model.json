@@ -12,6 +12,13 @@
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/GUANYIN.glb?v=1702516460150",
       "description": "Guanyin Statue bought at Mother of Junk",
       "position": [0,5, 1]
+    },
+    
+     {
+      "name": "HouShiJin_01",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/HouShiJIn_01.glb?v=1702590410907",
+      "description": "TuanTuan's Baba's Old Car's HouShiJin",
+      "position": [0,-3, 1]
     }
   ]
 }

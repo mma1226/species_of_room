@@ -69,18 +69,19 @@ function Scene() {
           //for each item, return a component (item)
           (item) => (
             <Suspense>
+              <Sparkles
+                  count={50}
+                  scale={10}
+                  size={0.5}
+                  speed={0.1}
+                />
               <Float
                 speed={1} // Animation speed, defaults to 1
                 rotationIntensity={1} // XYZ rotation intensity, defaults to 1
                 floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
                 floatingRange={[-0.3, 0.3]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
               >
-                <Sparkles
-                  count={50}
-                  scale={10}
-                  size={0.5}
-                  speed={0.01}
-                />
+                
                 <ModelPoints
                   key={item.name}
                   name={item.name}

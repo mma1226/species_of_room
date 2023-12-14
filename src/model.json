@@ -16,9 +16,17 @@
     
      {
       "name": "HouShiJin_Final",
-      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/HouShiJIn_Final.glb?v=1702591173981",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/HouShiJIn_BOOM.glb?v=1702591492021",
       "description": "TuanTuan's Baba's Old Car's HouShiJin",
       "position": [0,-3, 1]
+    },
+    
+    
+    {
+      "name": "MatchBox",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/MatchBox.glb?v=1702591860472",
+      "description": "Matchbox on a rock",
+      "position": [0,-7, 1]
     }
   ]
 }

@@ -79,7 +79,7 @@ function Scene() {
                   count={50}
                   scale={10}
                   size={0.5}
-                  speed={0.1}
+                  speed={0.01}
                 />
                 <ModelPoints
                   key={item.name}
@@ -87,7 +87,7 @@ function Scene() {
                   src={item.src}
                   text={item.text}
                   position={item.position}
-                  rotationSpeed={0.0001}
+                  rotationSpeed={0.001}
                 />
               </Float>
             </Suspense>

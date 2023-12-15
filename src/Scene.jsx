@@ -55,7 +55,7 @@ function Scene() {
         <pointLight color="white" position={[0, 1, 2.5]} intensity={3} />
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
-        <color args={["black"]} attach="background" />
+        <color args={["white"]} attach="background" />
 
         {/* Data points turned into geometry with it's own interaction 📌 */}
 

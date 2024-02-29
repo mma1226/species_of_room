@@ -41,7 +41,7 @@ export default function ModelPoints(props) {
           <Html>
             <div
               style={{
-               fontFamily:"'Courier New', monospace",
+                fontFamily:"'Courier New', monospace",
                 color: "rgb(204,222,224)",
                 padding: "10px",
                 background: "rgb(255,255,255,0.2)",

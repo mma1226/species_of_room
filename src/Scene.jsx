@@ -1,7 +1,7 @@
 import { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { BackSide } from "three";
-import { Environment, Float, Preload, Sparkles } from "@react-three/drei";
+import { Environment, Float, Preload, Sparkles, Html} from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
 
@@ -90,6 +90,10 @@ function Scene() {
                   position={item.position}
                   rotationSpeed={0.001}
                 />
+                  <Html position={[item.position[0], item.position[1] + 2, item.position[2]]}>
+                {/* Adjust position based on your preference */}
+                <div style={{ color: 'white', fontSize: '1.5rem' }}>{item.text}</div>
+              </Html>
               </Float>
             </Suspense>
           )

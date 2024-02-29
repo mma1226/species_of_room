@@ -1,16 +1,17 @@
 {
   "models": [
-    {
-      "name": "peeg",
-      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/mypeeg.glb?v=1701280505888",
-      "description": "peeg model scanned by michelle",
-      "position": [0, 1, 1]
-    },
+   
 
     {
       "name": "GUANYIN",
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/GUANYIN.glb?v=1702516460150",
       "description": "Guanyin Statue bought at Mother of Junk",
+      "position": [0, 6, 1]
+    },
+     {
+      "name": "peeg",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/mypeeg.glb?v=1701280505888",
+      "description": "peeg model scanned by michelle",
       "position": [0, 4, 1]
     },
     
@@ -18,7 +19,7 @@
       "name": "HouShiJin_Final",
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/HouShiJIn_BOOM.glb?v=1702591492021",
       "description": "Tuan's dad's Old Car's rear-view mirror",
-      "position": [0,-2, 1]
+      "position": [0,1, 1]
     },
     
     
@@ -26,11 +27,24 @@
       "name": "MatchBox",
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/MatchBox.glb?v=1702591860472",
       "description": "Matchbox on a rock",
-      "position": [0,-4.5, 1]
+      "position": [0,-2, 1]
     },
     
     {
-      "name":
+      "name": "Ceremics",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/ceramics.glb?v=1702517269292",
+      "description": "Devine Pottery Piece Captured at the MET",
+      "position": [0, -4.5 ,1]
+    },
+    
+    
+    {
+      "name": "Munyuu",
+      "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/munyuu.glb?v=1709242507673",
+      "description": "Devine Pottery Piece Captured at the MET",
+      "position": [0, -7 ,1]
     }
+    
+    
   ]
 }

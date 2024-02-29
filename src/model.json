@@ -27,7 +27,7 @@
       "name": "MatchBox",
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/MatchBox.glb?v=1702591860472",
       "description": "Matchbox on a rock",
-      "position": [0,-2, 1]
+      "position": [0,-3, 1]
     },
     
     {
@@ -36,14 +36,14 @@
       "description": "Devine Pottery Piece Captured at the MET",
       "position": [0, -4.5 ,1]
     },
-    
-    
     {
       "name": "Munyuu",
       "src": "https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/munyuu.glb?v=1709242507673",
-      "description": "Devine Pottery Piece Captured at the MET",
+      "description": "Munyuu from Japan",
       "position": [0, -7 ,1]
     }
+    
+
     
     
   ]

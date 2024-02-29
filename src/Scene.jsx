@@ -90,9 +90,16 @@ function Scene() {
                   position={item.position}
                   rotationSpeed={0.001}
                 />
-                  <Html position={[item.position[0], item.position[1] + 2, item.position[2]]}>
+                  <Html>
                 {/* Adjust position based on your preference */}
-                <div style={{ color: 'white', fontSize: '1.5rem' }}>{item.text}</div>
+                <div style={{ position: 'absolute', 
+                              top: 10, 
+                              left: '10%', 
+                              transform: 'translateX(-50%)', 
+                              color: 'Pink', 
+                              fontSize: '1.5rem',
+                              fontFamily:'EDDrayton-Regular'
+                            }}>Memorabilia</div>
               </Html>
               </Float>
             </Suspense>

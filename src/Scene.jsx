@@ -95,7 +95,7 @@ function Scene() {
                 <div style={{ position: 'absolute', 
                               top: 10, 
                               left: '10%', 
-                              transform: 'translateX(-50%)', 
+                              transform: 'translateX(-76%)', 
                               color: 'Pink', 
                               fontSize: '1.5rem',
                               fontFamily:'EDDrayton-Regular'

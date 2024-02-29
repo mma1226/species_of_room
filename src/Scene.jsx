@@ -93,7 +93,7 @@ function Scene() {
                   <Html>
                 {/* Adjust position based on your preference */}
                 <div style={{ position: 'absolute', 
-                              top: 10, 
+                              top: '20vh', 
                               left: '10%', 
                               transform: 'translateX(-76%)', 
                               color: 'Pink', 

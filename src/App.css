@@ -1,16 +1,17 @@
 body {
   /* Reseting the default here */
   margin: 0;
-  cursor:"zoom-in";
+  cursor: "zoom-in";
 }
 
 html {
-  cursor:"zoom-in";
+  cursor: "zoom-in";
 }
 
 #article_wrapper {
   position: relative;
   height: 5000px; /* Length of the interactive scroll article */
+  cursor: "zoom-in";
 }
 
 #canvas_wrapper {
@@ -19,15 +20,15 @@ html {
   top: 0;
   width: 100vw;
   height: 100vh;
+  cursor: "zoom-in";
 }
 
 .hoverText {
-
-color: "black";
-padding: "10px";
-background: "white";
- border-radius: "5px";
-           
+  color: "black";
+  padding: "10px";
+  background: "white";
+  border-radius: "5px";
+  cursor: "zoom-in";
 }
 
 .scroll_slide {
@@ -36,11 +37,10 @@ background: "white";
   width: "50vw";
   padding-left: "20px";
   z-index: "50";
+  cursor: "zoom-in";
 }
 
 @font-face {
   font-family: "EDDrayton-Regular";
-  src: url('https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/EDDrayton-Regular.woff?v=1709239464894')
+  src: url("https://cdn.glitch.global/10b345a3-95cd-4ca0-8235-797211874091/EDDrayton-Regular.woff?v=1709239464894");
 }
-
-

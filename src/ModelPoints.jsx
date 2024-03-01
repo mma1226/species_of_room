@@ -41,13 +41,13 @@ export default function ModelPoints(props) {
           <Html>
             <div
               style={{
-                width:"250%",
+                width:"150%",
                 fontFamily:"'Courier New', monospace",
                 color: "rgb(204,222,224)",
                 padding: "15px",
                 fontSize:"10px",
                 background: "rgb(255,255,255,0.2)",
-                borderRadius: "5px",
+                borderRadius: "50px",
               }}
             >
               {text}

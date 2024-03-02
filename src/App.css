@@ -2,10 +2,20 @@ body {
   /* Reseting the default here */
   margin: 0;
   cursor: "zoom-in";
+     overscroll-behavior: none;
+ 
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
 
 html {
   cursor: "zoom-in";
+
 }
 
 #article_wrapper {
